@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#ch_emergencia').click(function () {
+            var estado = document.getElementById('ch_emergencia').checked;
+            if(estado == true){
+                $("#ch_emergencia_info").prop('disabled', false);
+            } else {
+                $("#ch_emergencia_info").prop('disabled', true);
+            }
+        });
+
+        $('select').material_select();
+    });
+    </script>
+</head>
+<body>
+    <form class="" action="/getChamadas" method="post">
+        <div class="">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="ch_solicitante" name="ch_solicitante" type="text" class="validate">
+                    <label for="ch_solicitante" class="active">Nome do Solicitante</label>
+                </div>
+
+                <div class="input-field col s4">
+                    <input id="ch_telefone" name="ch_telefone" type="number" class="validate">
+                    <label for="ch_telefone" class="active">Telefone</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="ch_endereco" name="ch_endereco" type="text" class="validate">
+                    <label for="ch_endereco" class="active">Endereço</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="ch_numero" name="ch_numero" type="number" class="validate">
+                    <label for="ch_numero" class="active">Número</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="ch_bairro" name="ch_bairro" type="text" class="validate">
+                    <label for="ch_bairro" class="active">Bairro</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="ch_municipio" name="ch_municipio" type="text" class="validate">
+                    <label for="ch_municipio" class="active">Municipio</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="ch_referencia" name="ch_referencia" type="text" class="validate">
+                    <label for="ch_referencia" class="active">Referência</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="ch_paciente" name="ch_paciente" type="text" class="validate">
+                    <label for="ch_paciente" class="active">Nome do paciente</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <select name="ch_sexo">
+                        <option value="" disabled selected>Escolha uma opção:</option>
+                        <option value="masculino">Feminino</option>
+                        <option value="feminino">Masculino</option>
+                    </select>
+                    <label>Sexo</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="ch_idade" onkeyup="" name="ch_idade" type="number" class="validate">
+                    <label for="ch_idade" class="active">Idade</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <textarea id="ch_queixa" name="ch_queixa" class="materialize-textarea"></textarea>
+                    <label for="ch_queixa">Queixa do paciente</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <textarea id="ch_observacoes" name="ch_observacoes" class="materialize-textarea"></textarea>
+                    <label for="ch_observacoes">Observações</label>
+                </div>
+
+                <div class="switch col s2">
+                    <h6>É uma emergência médica?</h6>
+                    <label>
+                        Não
+                        <input type="checkbox" id="ch_emergencia" name="ch_emergencia">
+                        <span class="lever"></span>
+                        Sim
+                    </label>
+                </div>
+
+                <div class="input-field col s12">
+                    <textarea id="ch_emergencia_info" name="ch_emergencia_info" class="materialize-textarea"></textarea>
+                    <label for="ch_emergencia_info">Descreva a ocorrência médica:</label>
+                </div>
+
+                <div class="">
+                    <button class="btn waves-effect waves-light" type="submit" >Confirmar Chamado
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </body>
+    </html>

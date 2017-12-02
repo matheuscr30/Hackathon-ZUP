@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Hacking The Fire</title>
+
+    <!-- Bootstrap -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#btn_ocorrencias').click(function () {
+            $.ajax({
+                url: '/ocorrencias',
+                method: 'get',
+                success: function (data) {
+                    $('#conteudo').html(data);
+                }
+            });
+        });
+
+        $('#btn_recursos').click(function () {
+            $.ajax({
+                url: '/recursos',
+                method: 'get',
+                success: function (data) {
+                    $('#conteudo').html(data);
+                }
+            });
+        });
+
+        $('#btn_chamadas').click(function () {
+           $.ajax({
+                url: '/chamadas',
+                method: 'get',
+                success: function (data) {
+                    $('#conteudo').html(data);
+                }
+            });
+        }); 
+
+
+    });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" id="btn_chamadas" >Chamadas</a></li>
+                <li><a href="#" id="btn_ocorrencias" >Ocorrências</a></li>
+                <li><a href="#" id="btn_recursos" >Recursos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="conteudo">
+        </div>
+    </div>
+</body>
+</html>
