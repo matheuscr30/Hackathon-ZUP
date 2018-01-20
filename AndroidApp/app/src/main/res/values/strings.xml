@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Hackathon ZUP</string>
+
+    <string name="Iniciar">Iniciar</string>
+    <string name="Id_Invalido">Id Inválido</string>
+    <string name="Aguardando_Dispacho">Aguardando Despacho...</string>
+    <string name="Em_Operacao">Em Operação...</string>
+
+    <!-- Main Activity -->
+    <string name="Label_Main_Activity">Corpo de Bombeiros</string>
+    <string name="Recurso">Recurso %1$s</string>
+
+    <!-- Setup Activity -->
+    <string name="setup_recurso_id_hint">Identificador do Recurso</string>
+
+    <!-- PREFERENCES DEFAULTS -->
+    <string name="pref_default_string">default_id</string>
+    <string name="pref_default_int">0</string>
+
+    <!-- Shared Preferences RECURSO -->
+    <string name="pref_recurso">pref_recurso</string>
+    <string name="pref_recurso_id">pref_recurso_id</string>
+    <string name="title_activity_chamada">ChamadaActivity</string>
+
+    <!-- Shared Preferences CHAMADA -->
+    <string name="pref_chamada">pref_chamada</string>
+    <string name="pref_chamada_id">pref_chamada_id</string>
+    <string name="pref_chamada_telefone">pref_chamada_telefone</string>
+    <string name="pref_chamada_solicitante">pref_chamada_solicitante</string>
+
+    <!-- Shared Preferences Endereco -->
+    <string name="pref_endereco">pref_endereco</string>
+    <string name="pref_endereco_">pref_endereco_</string>
+    <string name="pref_endereco_municipio">pref_endereco_municipio</string>
+    <string name="pref_endereco_bairro">pref_endereco_bairro</string>
+    <string name="pref_endereco_numero">pref_endereco_numero</string>
+    <string name="pref_endereco_referencia">pref_endereco_referencia</string>
+
+    <!-- Shared Preferences Paciente -->
+    <string name="pref_paciente">pref_paciente</string>
+    <string name="pref_paciente_nome">pref_paciente_nome</string>
+    <string name="pref_paciente_idade">pref_paciente_idade</string>
+    <string name="pref_paciente_sexo">pref_paciente_sexo</string>
+
+    <!-- Shared Preferences Queixa -->
+    <string name="pref_queixa">pref_queixa</string>
+    <string name="pref_queixa_descricao">pref_queixa_descricao</string>
+    <string name="pref_queixa_observacoes">pref_queixa_observacoes</string>
+    <string name="pref_queixa_emergencia">pref_queixa_emergencia</string>
+</resources>

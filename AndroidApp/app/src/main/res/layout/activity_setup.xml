@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context="com.hackathon.activities.SetupActivity" >
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/setup_et_recurso_ti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp">
+
+        <EditText
+            android:id="@+id/setup_et_recurso_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/setup_recurso_id_hint" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="@string/Iniciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="iniciar"/>
+
+</LinearLayout>

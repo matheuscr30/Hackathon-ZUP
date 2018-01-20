@@ -1,0 +1,111 @@
+Chamadas
+
+PATH: /chamada
+  GET: Exibe todos os Chamados existentes sem verificação se esta aberto
+    RESPONSES:
+      200: Exibiu Chamados
+      PARAMETERS:
+        {
+          [{Chamadas}]: Lista de chamadas
+        }
+    500: Unexpected error
+
+  POST: Cria Chamados
+    PARAMETERS:
+      {
+        "ch_bairro": STRING,
+        "ch_emergencia": BOOLEAN,
+        "ch_queixa": STRING,
+        "ch_endereco": STRING,
+        "ch_numero": INT,
+        "ch_sexo": STRING,
+        "ch_solicitante": STRING,
+        "ch_telefone": STRING,
+        "ch_paciente": STRING,
+        "ch_referencia": STRING,
+        "ch_municipio": STRING,
+        "ch_emergencia_info": STRING,
+        "ch_idade": INT,
+        "ch_observacoes": STRING
+      }
+    RESPONSES:
+      200: Criou nova Chamada
+        PARAMETERS:
+          {
+            {$oid:ObjectId}
+          }
+      500: Unexpected error
+
+Path: /chamada/ObjectId    (Passar a Hash do ObjectId)
+
+    GET: Recupera uma Chamada
+      RESPONSES:
+        200: chamada encontrada
+          {
+            {CHAMADA}
+          }
+
+        500: Unexpected error
+
+    PUT: Altera uma chamada
+      RESPONSES:
+        200: chamada Alterada
+          {
+            {CHAMADA} Retorna chamada alterada
+          }
+        500: Unexpected error
+
+    DELETE: Deleta uma Chamada
+      RESPONSES:
+        200: chamada deletada
+
+        500: Unexpected error
+
+Path: /recurso    (Passar a Hash do ObjectId)
+
+    GET: Recupera todas os Recursos
+      RESPONSES:
+        200: recursos encontrados
+          {
+            {RECURSOS}
+          }
+
+        500: Unexpected error
+
+    POST: Cria um recurso
+      PARAMETERS:
+        {
+          "long": DOUBLE,
+          "lat": DOUBLE,
+        }
+      RESPONSES:
+        200: Recurso Criado
+          {
+            {RECURSO} Retorna recurso criado
+          }
+        500: Unexpected error
+
+Path: /recurso/ObjectId    (Passar a Hash do ObjectId)
+
+    GET: Recupera um recurso
+      RESPONSES:
+        200: recurso encontrado
+          {
+            {RECURSO}
+          }
+
+        500: Unexpected error
+
+    PUT: Altera um recurso
+      RESPONSES:
+        200: recurso Alterado
+          {
+            {RECURSO} Retorna recurso alterado
+          }
+        500: Unexpected error
+
+    DELETE: Deleta um recurso
+      RESPONSES:
+        200: recurso deletado
+
+        500: Unexpected error
