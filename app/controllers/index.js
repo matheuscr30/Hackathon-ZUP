@@ -1,5 +1,5 @@
 module.exports.home = function (application, req, res) {
-    res.render('index');
+    res.render('dashboard',  {conteudo : 'ocorrencias'});
 }
 
 module.exports.getOcorrencias = function (application, req, res) {

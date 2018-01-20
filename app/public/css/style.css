@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+    font-family: 'Open Sans',serif;
+}
+
+.modal-emergencia{
+    border-top-color:red;
+    border-top: 20px;
+    border-style: solid none none none;
+}
+
+.modal-padrao{
+    border-top-color:blue;
+    border-top: 20px;
+    border-style: solid none none none;
+}
+
+.chatbox{
+    width: 765px;
+    height: 300px;
+}
+
+p.bold{
+    font-weight: bold;
+}
+
+.card-bord{
+    position:relative;
+    padding: 15px;
+    margin: 10px;
+}
+
+#ocorrencia{
+    display: inline-block;
+    height: 250px;
+    width: 180px;
+    background-color: green;
+}
+
+#recurso{
+    display: inline-block;
+    height: 250px;
+    width: 180px;
+    background-color: green;
+}
+
+nav{
+    background-color:#d50000;}
+
+.page-footer{
+    background-color: #333333;
+}
+
+.page-footer .footer-copyright {
+    background-color:#d50000;
+}
+
+.logo-footer{
+    max-width:150px;
+    max-height: 150px;
+    float: right;
+}
+
+h6#label-emergencia {
+    color: rgb(169, 169, 169);
+}
+
+.principal{
+position: relative;
+height: 50%;
+width: auto;
+margin: 15px; 20%;
+padding: 10px;
+}
+
+#emergencia_button{
+    padding-top: 25px;
+}
+
+#conteudo{
+padding: 45px;
+margin: 0 15%;
+}
+
+.isEmergency{
+    background-color: #ff2525;
+    color:white;
+}
+
+table.striped>tbody>tr:nth-child(odd){
+    background-color: none;
+}
+
+.espacador-lateral{
+    margin: 0px 15px 0px 15px;
+}
+
+.titulo-conteudo{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}

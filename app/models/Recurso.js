@@ -1,17 +1,17 @@
 var request = require('request');
 
-function Ocorrencia(){
+function Recurso(){
 }
 
-Ocorrencia.prototype.getOcorrencias = function(callback){
+Recurso.prototype.getRecursos = function(callback){
     var headers = {
         'Content-Type': 'application/json'
     }
 
     // Configure the request
     var options = {
-        url: 'http://172.10.100.42/api/chamada',
-        //url: 'http://104.236.94.131/api/chamada/urgencia',
+        url: 'http://172.10.100.42/api/recurso',
+        //url: 'http://104.236.94.131/api/recurso',
         method: 'GET',
         headers: headers
     }
@@ -25,20 +25,19 @@ Ocorrencia.prototype.getOcorrencias = function(callback){
     });
 }
 
-Ocorrencia.prototype.salvarOcorrencia = function (ocorrencia, callback) {
+Recurso.prototype.salvarRecurso = function (recurso, callback) {
 
     var headers = {
         'Content-Type': 'application/json'
     }
 
-    ocorrencia.ch_status = 'Aberto';
     // Configure the request
     var options = {
-        url: 'http://172.10.100.42/api/chamada',
-        //url: 'http://104.236.94.131/api/chamada',
+        url: 'http://172.10.100.42/api/recurso',
+        //url: 'http://104.236.94.131/api/recurso',
         method: 'POST',
         headers: headers,
-        form: ocorrencia
+        form: recurso
     }
 
     // Start the request
@@ -46,11 +45,11 @@ Ocorrencia.prototype.salvarOcorrencia = function (ocorrencia, callback) {
         if (!error && response.statusCode == 200) {
             // Print out the response body
             console.log("eoq");
-            console.log(body);
+            console.log(body)
         }
     });
 }
 
 module.exports = function () {
-    return Ocorrencia;
+    return Recurso;
 }

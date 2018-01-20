@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+
+    <h3>Ocorrências</h3>
+
+    <table class="striped z-depth-2">
+        <thead>
+            <tr>
+                <th>Nome do Solicitante</th>
+                <th>Município</th>
+                <th>Nome do Paciente</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>Emergência Médica?</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% for(var i = 0; i < dados.length; i++) { %>
+                <tr>
+                    <td><%= dados[i].ch_solicitante %></td>
+                    <td><%= dados[i].ch_municipio %></td>
+                    <td><%= dados[i].ch_paciente %></td>
+                    <td><%= dados[i].ch_sexo %></td>
+                    <td><%= dados[i].ch_idade %></td>
+                    <td><%= dados[i].ch_emergencia %></td>
+                    <td><%= dados[i].ch_status %></td>
+                    <!--<td>
+                        <a id="btn_editar_ocorrencia" href="/t?hm=<%=dados[i]._id%>" tlllitle="Editar Ocorrência" class="btn_modal modal-trigger btn-floating btn waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                    </td>
+-->                    <td>
+                        <a id="btn_designar_recurso" href="/mapaRecursos?id=<%=dados[i]._id%>" title="Designar Recurso" class="btn_modal modal-trigger btn-floating btn waves-effect waves-light green"><i class="material-icons">keyboard_tab</i></a>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+            });
+        </script>
+    </body>
+    </html>

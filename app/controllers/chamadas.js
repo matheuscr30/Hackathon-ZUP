@@ -2,7 +2,7 @@ module.exports.home = function (application, req, res) {
     res.render('chamadas');
 }
 
-module.exports.getChamadas = function (application, req, res) {
+module.exports.salvarChamada = function (application, req, res) {
 
     var dadosForm = req.body;
 
@@ -20,12 +20,20 @@ module.exports.getChamadas = function (application, req, res) {
 
     var erros = req.validationErrors();
 
+    if(req.body.ch_emergencia == 'true'){
+        req.body.ch_emergencia = 'NAO';
+    } else {
+        req.body.ch_emergencia = 'SIM';
+    }
+
     console.log(erros);
 
     if(erros){
+        res.render('dashboard', {'conteudo' : 'chamadas', erros : erros, dadosForm : req.body});
         return;
     }
 
     var Ocorrencia = new application.app.models.Ocorrencia();
     Ocorrencia.salvarOcorrencia(dadosForm);
+    res.render('dashboard', {'conteudo': 'ocorrencias', erros : {}, dadosForm : {}});
 }
